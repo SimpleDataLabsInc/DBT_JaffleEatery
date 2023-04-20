@@ -65,19 +65,9 @@ topOrders AS (
 
 ),
 
-Reformat AS (
+Reformat_1 AS (
 
-  SELECT 
-    order_id AS order_id,
-    customer_id AS customer_id,
-    order_date AS order_date,
-    status AS status,
-    credit_card_amount AS credit_card_amount,
-    coupon_amount AS coupon_amount,
-    bank_transfer_amount AS bank_transfer_amount,
-    gift_card_amount AS gift_card_amount,
-    amount AS amount,
-    concat(order_id, status) AS ID_status
+  SELECT * 
   
   FROM topOrders AS in0
 
@@ -85,4 +75,4 @@ Reformat AS (
 
 SELECT *
 
-FROM Reformat
+FROM Reformat_1
